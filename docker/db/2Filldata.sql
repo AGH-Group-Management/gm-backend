@@ -93,6 +93,11 @@ insert into studentstosubjects (studentsid, subjects_id) VALUES (1, 4), (1, 5),(
 
 --- REQUESTS
 
+insert into requests (users_id, description, createdon, modifiedon, progress) VALUES (2, 'Zamiana przedmiotu', '2024-02-02', '2024-03-13', 'Troche sobie poczeka'), (4, 'Zamiana przedmiotu', '2024-02-24', '2024-03-20', 'Troche sobie poczeka'),
+                                                                                     (3, 'Błąd', '2024-02-01', '2024-03-02', 'Troche sobie poczeka'),(6, 'Błąd', '2024-02-17', '2024-03-07', 'Troche sobie poczeka'),
+                                                                                     (11, 'Urlop', '2024-02-05', '2024-03-15', 'Troche sobie poczeka'),(8, 'Zamiana przedmiotu', '2024-02-15', '2024-03-12', 'Troche sobie poczeka'),
+                                                                                     (14, 'Urlop', '2024-02-06', '2024-03-08', 'Troche sobie poczeka'),(12, 'Urlop', '2024-02-22', '2024-03-15', 'Troche sobie poczeka'),
+                                                                                     (17, 'Zamiana przedmiotu', '2024-02-12', '2024-03-01', 'Troche sobie poczeka');
 
 --- CHANGE REQUEST
 
