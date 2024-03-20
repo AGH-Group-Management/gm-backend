@@ -1,5 +1,9 @@
 # Jak uruchomić bazę danych?
 
+## UWAGA!!
+## a) Na początku upewnij się, że nie masz zainstalowanego PostgresSQL Server na komputerze. Powoduje to błąd przy logowaniu się do bazy.
+## b) Zainstaluj dockera
+
 ## 1. Uruchom Dockera. Usuń poprzednie kontenery i woluminy związane z tą bazą.
 ## 2. W Intellij'u kliknij na ikonkę bazy. (Jest w prawym górnym rogu) <br> ![Database](readme/database.png)
 ## 3. Następnie kliknij w '+' -> DataSource i wybierz PostgreSQL. <br> ![Postgres](readme/postgresql.png)
