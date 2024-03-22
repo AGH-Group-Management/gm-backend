@@ -52,31 +52,31 @@ INSERT INTO  students (studentid, semester, pathid, index) values (2, 4, 1, '410
 
 --- SUBJECTS
 
-INSERT INTO subjects (name, description, semester, isrequired, maxslots) VALUES
-                                                                                       ('Logika matematyczna', 'Aby Studenci rozumieli podstawy logiki i celowość jej stosowania - na choćby elementarnym poziomie..',2, true, null),
-                                                                                       ('Algorytmy i struktury danych', 'Przedmiot zapoznaje studentów z podstawowymi algorytmami, strukturami danych, oraz metodami tworzenia i analizy algorytmów.',2, true, null),
-                                                                                       ('Fizyka 1', 'Zapoznanie studentów z najbardziej fundamentalnymi prawami opisującymi budowę i właściwości materii oraz oddziaływaniami obserwowanymi w przyrodzie.',2, true, null),
-                                                                                       ('Technika cyfrowa', 'Moduł omawia budowę i działanie podstawowych układów cyfrowych.',4, true, null),
-                                                                                       ('Systemy operacyjne', 'Zapoznanie studentów z zasadami funkcjonowania systemów operacyjnych oraz metodami ich budowy.',4, true, null),
-                                                                                       ('Metody obliczeniowe w nauce i technice', 'Celem modułu jest zapoznanie studenta z podstawowymi algorytmami numerycznymi.',4, true, null),
-                                                                                       ('Architektura komputerów', 'W trakcie zajęć studenci poznają podstawowe zagadnienia budowy komputerów o wielu procesorach oraz problemy związane z ich wykorzystaniem.',6, true, null),
-                                                                                       ('Inżynieria oprogramowania', '	Celem zajęć jest przekazanie studentowi wiedzy o współczesnych metodykach i technikach stosowanych w zespołach programistycznych.',6, true, null),
-                                                                                       ('Systemy rozproszone', 'Moduł wprowadza studenta w podstawy systemów rozproszonych.',6, true, null),
-                                                                                       ('Bezpieczeństwo sieci komputerowych', 'Przekazanie wiedzy o technikach monitorowania stanu urządzeń sieciowych i ich zabezpieczania.',6, false, 112),
-                                                                                       ('Systemy czasu rzeczywistego', 'Celem kształcenia jest przekazanie wiedzy dotyczącej i analizy.',6, false, 112),
-                                                                                       ('Programowanie w języku Icon', 'Celem przedmiotu jest zapoznanie studentów z programowaniem w języku Icon.',4, false, 112),
-                                                                                       ('Programowanie w języku Scala', 'Wprowadzenie do Scali obejmujące elementy programowania obiektowego, generycznego i funkcyjnego.',4, true, 112),
-                                                                                       ('Elementy statystycznego uczenia maszynowego', 'Niniejszy kurs stanowi wprowadzenie do metod i algorytmów statystycznego uczenia maszynowego',4, true, null),
-                                                                                       ('Wprowadzenie do inżynierii bezpieczeństwa', 'Moduł prezentuje przekrojową i aktualną wiedzę z dziedziny inżynierii bezpieczeństwa.',6, true, null),
-                                                                                       ('Podstawy uczenia maszynowego', 'Celem jest zapoznanie studentów z głównymi algorytmami uczenia maszynowego i inżynierii cech.',6, false, 112),
-                                                                                       ('Eksploracja danych', 'Eksploracja danych jako proces.',8, false, null),
-                                                                                       ('Środowiska udostępniania usług', 'Tematyka modułu dotyczy budowy usług eksploatowanych w systemach chmurowych.',8, false, null),
-                                                                                       ('Programowanie animacji', 'Celem jest zapoznanie studentów z animacją komputerową',8, false, null),
-                                                                                       ('Uczenie paszyn', 'Celem zajęć jest przekazanie wiedzy studentom w obszarze uczenia paszyn.',8, false, 112),
-                                                                                       ('Kompetencje w zmieniającym się społeczeństwie', 'Kompetencje w zmieniającym się społeczeństwie to przedmiot!',10, false, null),
-                                                                                       ('Problemy prawne systemów AI', 'Celem kursu jest wprowadzenie studentów do problematyki prawnych aspektów wiążących się z projektowaniem.',10, false, null),
-                                                                                       ('Informatyka medyczna', 'Przedmiot zapoznaje z zagadnieniami z dziedziny informatyki medycznej.',10, false, null),
-                                                                                       ('Ochrona własności intelektualnej', 'Celem modułu jest przedstawienie, co to jest własność intelektualna.',2, true, null);
+INSERT INTO subjects (name, description, semester, isrequired, pathid, maxslots) VALUES
+                                                                                       ('Logika matematyczna', 'Aby Studenci rozumieli podstawy logiki i celowość jej stosowania - na choćby elementarnym poziomie..',2, true, null, null),
+                                                                                       ('Algorytmy i struktury danych', 'Przedmiot zapoznaje studentów z podstawowymi algorytmami, strukturami danych, oraz metodami tworzenia i analizy algorytmów.',2, true, null, null),
+                                                                                       ('Fizyka 1', 'Zapoznanie studentów z najbardziej fundamentalnymi prawami opisującymi budowę i właściwości materii oraz oddziaływaniami obserwowanymi w przyrodzie.',2, true, null, null),
+                                                                                       ('Technika cyfrowa', 'Moduł omawia budowę i działanie podstawowych układów cyfrowych.',4, true, null, null),
+                                                                                       ('Systemy operacyjne', 'Zapoznanie studentów z zasadami funkcjonowania systemów operacyjnych oraz metodami ich budowy.',4, true, null, null),
+                                                                                       ('Metody obliczeniowe w nauce i technice', 'Celem modułu jest zapoznanie studenta z podstawowymi algorytmami numerycznymi.',4, true, null, null),
+                                                                                       ('Architektura komputerów', 'W trakcie zajęć studenci poznają podstawowe zagadnienia budowy komputerów o wielu procesorach oraz problemy związane z ich wykorzystaniem.',6, true, null, null),
+                                                                                       ('Inżynieria oprogramowania', '	Celem zajęć jest przekazanie studentowi wiedzy o współczesnych metodykach i technikach stosowanych w zespołach programistycznych.',6, true, null, null),
+                                                                                       ('Systemy rozproszone', 'Moduł wprowadza studenta w podstawy systemów rozproszonych.',6, true, null, null),
+                                                                                       ('Bezpieczeństwo sieci komputerowych', 'Przekazanie wiedzy o technikach monitorowania stanu urządzeń sieciowych i ich zabezpieczania.',6, false, null, 112),
+                                                                                       ('Systemy czasu rzeczywistego', 'Celem kształcenia jest przekazanie wiedzy dotyczącej i analizy.',6, false, null, 112),
+                                                                                       ('Programowanie w języku Icon', 'Celem przedmiotu jest zapoznanie studentów z programowaniem w języku Icon.',4, false, null, 112),
+                                                                                       ('Programowanie w języku Scala', 'Wprowadzenie do Scali obejmujące elementy programowania obiektowego, generycznego i funkcyjnego.',4, true, null, 112),
+                                                                                       ('Elementy statystycznego uczenia maszynowego', 'Niniejszy kurs stanowi wprowadzenie do metod i algorytmów statystycznego uczenia maszynowego',4, true, 2, null),
+                                                                                       ('Wprowadzenie do inżynierii bezpieczeństwa', 'Moduł prezentuje przekrojową i aktualną wiedzę z dziedziny inżynierii bezpieczeństwa.',6, true, 1, null),
+                                                                                       ('Podstawy uczenia maszynowego', 'Celem jest zapoznanie studentów z głównymi algorytmami uczenia maszynowego i inżynierii cech.',6, false, null, 112),
+                                                                                       ('Eksploracja danych', 'Eksploracja danych jako proces.',8, false, null, null),
+                                                                                       ('Środowiska udostępniania usług', 'Tematyka modułu dotyczy budowy usług eksploatowanych w systemach chmurowych.',8, false, null, null),
+                                                                                       ('Programowanie animacji', 'Celem jest zapoznanie studentów z animacją komputerową',8, false, null, null),
+                                                                                       ('Uczenie paszyn', 'Celem zajęć jest przekazanie wiedzy studentom w obszarze uczenia paszyn.',8, false, null, 112),
+                                                                                       ('Kompetencje w zmieniającym się społeczeństwie', 'Kompetencje w zmieniającym się społeczeństwie to przedmiot!',10, false, null, null),
+                                                                                       ('Problemy prawne systemów AI', 'Celem kursu jest wprowadzenie studentów do problematyki prawnych aspektów wiążących się z projektowaniem.',10, false, null, null),
+                                                                                       ('Informatyka medyczna', 'Przedmiot zapoznaje z zagadnieniami z dziedziny informatyki medycznej.',10, false, null, null),
+                                                                                       ('Ochrona własności intelektualnej', 'Celem modułu jest przedstawienie, co to jest własność intelektualna.',2, true, null, null);
 
 
 --- STUDENTS TO SUBJECTS
