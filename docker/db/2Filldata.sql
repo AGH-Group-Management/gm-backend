@@ -88,9 +88,6 @@ insert into studentstosubjects (studentsid, subjects_id) VALUES (1, 4), (1, 5),(
 
 
 
---- VACATION REQUESTS
-
-
 --- REQUESTS
 
 insert into requests (users_id, description, createdon, modifiedon, progress) VALUES (2, 'Zamiana przedmiotu', '2024-02-02', '2024-03-13', 'Troche sobie poczeka'), (4, 'Zamiana przedmiotu', '2024-02-24', '2024-03-20', 'Troche sobie poczeka'),
@@ -99,8 +96,15 @@ insert into requests (users_id, description, createdon, modifiedon, progress) VA
                                                                                      (14, 'Urlop', '2024-02-06', '2024-03-08', 'Troche sobie poczeka'),(12, 'Urlop', '2024-02-22', '2024-03-15', 'Troche sobie poczeka'),
                                                                                      (17, 'Zamiana przedmiotu', '2024-02-12', '2024-03-01', 'Troche sobie poczeka');
 
---- CHANGE REQUEST
+--- VACATION REQUESTS
 
+insert into vacationrequest (requests_id, startdate, enddate) VALUES (5,'2023-10-01', '2024-09-30'),(7, '2023-10-01', '2024-09-30'),(8, '2024-10-01', '2025-09-30');
+
+
+
+--- CHANGE REQUEST
+insert into changerequest (requests_id, subject1id, subject2id) values (1, 12, 13), (2, 13, 12), (6, 10, 16), (9, 16, 10);
 
 
 --- OTHER REQUEST
+insert into otherrequests (requests_id)  values (3),(4);
