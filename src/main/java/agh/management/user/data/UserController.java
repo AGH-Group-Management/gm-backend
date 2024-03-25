@@ -28,9 +28,12 @@ public class UserController {
     }
 
     @RequestMapping("/login")
-    public boolean login(@RequestBody Credentials credentials ) {
+    public User login(@RequestBody Credentials credentials ) {
         User user1 = userRepository.findByEmail(credentials.userName);
-        return user1.getPassword().equals(credentials.password);
+        if (user1.getPassword().equals(credentials.password)) {
+            return user1;
+        }
+        return null;
     }
 
     @RequestMapping("/user")
