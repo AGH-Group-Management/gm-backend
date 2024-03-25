@@ -25,9 +25,11 @@ public class Request {
     private String description;
 
     @Column(name = "CreatedOn")
+    @Temporal(TemporalType.DATE)
     private Date createdOn;
 
     @Column(name = "ModifiedOn")
+    @Temporal(TemporalType.DATE)
     private Date modifiedOn;
 
     @Column(name = "Progress")

@@ -1,5 +1,6 @@
 package agh.management.otherrequest;
 
+import agh.management.request.Request;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,14 +8,15 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "OtherRequests")
+@Table(name = "Otherrequests")
 public class OtherRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private int id;
 
-    @Column(name = "Request_ID")
-    private int requestID;
+    @ManyToOne
+    @JoinColumn(name = "Requests_ID", referencedColumnName = "ID")
+    private Request request;
 
 }

@@ -10,6 +10,7 @@ import java.util.Date;
 @Entity
 @Getter
 @Setter
+@Table(name = "Vacationrequest")
 public class VacationRequest {
 
     @Id
@@ -17,8 +18,8 @@ public class VacationRequest {
     @Column(name = "ID")
     private int id;
 
-    @OneToOne
-    @JoinColumn(name = "Request_ID", referencedColumnName = "ID")
+    @ManyToOne
+    @JoinColumn(name = "Requests_ID", referencedColumnName = "ID")
     private Request request;
 
     @Column(name = "StartDate")

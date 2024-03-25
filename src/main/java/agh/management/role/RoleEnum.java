@@ -1,5 +1,8 @@
 package agh.management.role;
 
+import lombok.Getter;
+
+@Getter
 public enum RoleEnum {
     STUDENT("Student"),
     DEAN("Dziekan"),
@@ -11,7 +14,4 @@ public enum RoleEnum {
         this.description = description;
     }
 
-    public String getDescription() {
-        return description;
-    }
 }

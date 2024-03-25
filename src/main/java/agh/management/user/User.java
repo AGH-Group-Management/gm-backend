@@ -1,4 +1,5 @@
 package agh.management.user;
+import agh.management.role.Role;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,18 +26,18 @@ public class User {
     @Column(name = "Email")
     private String email;
 
-    @Column(name = "RoleId")
-    private Integer roleId;
-
+    @ManyToOne
+    @JoinColumn(name = "RoleId", referencedColumnName = "id")
+    private Role role;
     public User() {
     }
 
-    public User(String name, String surname, String password, String email, Integer roleId) {
+    public User(String name, String surname, String password, String email, Role role) {
         this.name = name;
         this.surname = surname;
         this.password = password;
         this.email = email;
-        this.roleId = roleId;
+        this.role = role;
     }
 
 }

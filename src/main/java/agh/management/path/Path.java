@@ -7,6 +7,7 @@ import lombok.Setter;
 @Entity
 @Setter
 @Getter
+@Table(name = "Paths")
 public class Path {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
