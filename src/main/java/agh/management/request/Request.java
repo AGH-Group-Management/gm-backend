@@ -18,17 +18,17 @@ public class Request {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "User_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "Users_ID", referencedColumnName = "ID")
     private User user;
 
     @Column(name = "Description")
     private String description;
 
-    @Column(name = "CreatedOn")
+    @Column(name = "Createdon")
     @Temporal(TemporalType.DATE)
     private Date createdOn;
 
-    @Column(name = "ModifiedOn")
+    @Column(name = "Modifiedon")
     @Temporal(TemporalType.DATE)
     private Date modifiedOn;
 

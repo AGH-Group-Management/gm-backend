@@ -26,7 +26,7 @@ public class Subject {
     @Column(name = "PathID")
     private int pathId;
 
-    @Column(name = "isRequired")
+    @Column(name = "isrequired")
     private boolean required;
 
     @Column(name = "maxSlots")

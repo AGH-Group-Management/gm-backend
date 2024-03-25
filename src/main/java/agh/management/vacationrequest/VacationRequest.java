@@ -22,10 +22,11 @@ public class VacationRequest {
     @JoinColumn(name = "Requests_ID", referencedColumnName = "ID")
     private Request request;
 
-    @Column(name = "StartDate")
+    @Temporal(TemporalType.DATE)
+    @Column(name = "Startdate")
     private Date startDate;
 
-
-    @Column(name = "EndDate")
+    @Temporal(TemporalType.DATE)
+    @Column(name = "Enddate")
     private Date endDate;
 }
