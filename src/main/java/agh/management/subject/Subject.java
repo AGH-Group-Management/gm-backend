@@ -10,13 +10,20 @@ import lombok.Setter;
 public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "ID")
+    private int id;
 
+    @Column(name = "Name")
     private String name;
 
+    @Column(name = "Description")
     private String description;
 
+    @Column(name = "Semester")
     private int semester;
+
+    @Column(name = "PathID")
+    private int pathId;
 
     @Column(name = "isRequired")
     private boolean required;

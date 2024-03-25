@@ -1,17 +1,18 @@
 package agh.management.path;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Setter
 @Getter
 public class Path {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "ID")
+    private int id;
 
+    @Column(name = "Name")
     private String name;
 }

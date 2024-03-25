@@ -1,29 +1,42 @@
 package agh.management.user;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
+import java.security.Principal;
+import java.util.Base64;
 
+class Credentials{
+    String userName;
+    String password;
+
+    public Credentials(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
+}
 @RestController
-@RequestMapping("/api/users")
+@CrossOrigin
 public class UserController {
-    private final UserRepository userRepository;
+
+    final
+    UserRepository userRepository;
 
     public UserController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-    @PostMapping("/create")
-    public ResponseEntity<User> createUser(@RequestBody User user){
-        userRepository.save(user);
-        return new ResponseEntity<>(user, HttpStatus.CREATED);
+    @RequestMapping("/login")
+    public boolean login(@RequestBody Credentials credentials ) {
+        User user1 = userRepository.findByEmail(credentials.userName);
+        return user1.getPassword().equals(credentials.password);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Long id){
-        Optional<User> user = userRepository.findById(id);
-        return user.map(value -> new ResponseEntity<>(value, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    @RequestMapping("/user")
+    public Principal user(HttpServletRequest request) {
+        String authToken = request.getHeader("Authorization")
+                .substring("Basic".length()).trim();
+        return () ->  new String(Base64.getDecoder()
+                .decode(authToken)).split(":")[0];
     }
 }

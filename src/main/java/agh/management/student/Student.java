@@ -12,12 +12,14 @@ import lombok.Setter;
 public class Student {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "ID")
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "StudentID", referencedColumnName = "id")
     private User user;
 
+    @Column(name = "Semester")
     private int semester;
 
     @ManyToOne
