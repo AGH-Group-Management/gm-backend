@@ -29,7 +29,7 @@ public class Subject {
     @Column(name = "isrequired")
     private boolean required;
 
-    @Column(name = "maxSlots")
+    @Column(name = "maxslots")
     private int maxSlots;
 
 }
