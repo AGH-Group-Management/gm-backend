@@ -1,6 +1,7 @@
-package agh.management.user.data;
+package agh.management.user.auth;
 
-import agh.management.user.repository.UserRepository;
+import agh.management.user.User;
+import agh.management.user.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,19 +19,22 @@ class Credentials{
 }
 @RestController
 @CrossOrigin
-public class UserController {
+public class AuthController {
 
     final
     UserRepository userRepository;
 
-    public UserController(UserRepository userRepository) {
+    public AuthController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
     @RequestMapping("/login")
-    public boolean login(@RequestBody Credentials credentials ) {
+    public User login(@RequestBody Credentials credentials ) {
         User user1 = userRepository.findByEmail(credentials.userName);
-        return user1.getPassword().equals(credentials.password);
+        if (user1.getPassword().equals(credentials.password)) {
+            return user1;
+        }
+        return null;
     }
 
     @RequestMapping("/user")
