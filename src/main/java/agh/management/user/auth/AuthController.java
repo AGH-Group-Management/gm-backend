@@ -1,6 +1,7 @@
-package agh.management.user.data;
+package agh.management.user.auth;
 
-import agh.management.user.repository.UserRepository;
+import agh.management.user.User;
+import agh.management.user.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,12 +19,12 @@ class Credentials{
 }
 @RestController
 @CrossOrigin
-public class UserController {
+public class AuthController {
 
     final
     UserRepository userRepository;
 
-    public UserController(UserRepository userRepository) {
+    public AuthController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
